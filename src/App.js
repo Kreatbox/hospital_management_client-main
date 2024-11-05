@@ -4,7 +4,7 @@ const app = express();
 app.use(
   cors({
     origin:
-      "https://hospital-management-client-main-3w2lwli0x-kreatboxs-projects.vercel.app/",
+      "https://hospital-management-client-main-git-main-kreatboxs-projects.vercel.app/",
     optionsSuccessStatus: 200,
   })
 );
