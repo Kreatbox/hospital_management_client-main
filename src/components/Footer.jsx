@@ -8,7 +8,7 @@ const Footer = () => {
   const getInfo = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/`,
         {
           headers: {
             "Content-Type": "application/json",
