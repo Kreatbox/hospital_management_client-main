@@ -3,13 +3,12 @@ import React, { useEffect, useState } from "react";
 import toast from "react-hot-toast";
 // import Imgsocial from "../assets/img/social.png";
 const Footer = () => {
-    
   const [hospital, setHospital] = useState();
-  console.log(hospital)
+  console.log(hospital);
   const getInfo = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}`,
         {
           headers: {
             "Content-Type": "application/json",
