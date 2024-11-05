@@ -1,3 +1,14 @@
+const express = require("express");
+const cors = require("cors");
+const app = express();
+app.use(
+  cors({
+    origin:
+      "https://hospital-management-client-main-3w2lwli0x-kreatboxs-projects.vercel.app/",
+    optionsSuccessStatus: 200,
+  })
+);
+
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
@@ -105,7 +116,6 @@ function App() {
             element={<MakeAppointment />}
           />
         </Routes>
-        
       </BrowserRouter>
     </div>
   );
