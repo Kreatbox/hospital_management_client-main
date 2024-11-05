@@ -1,18 +1,3 @@
-const express = require("express");
-const cors = require("cors");
-const app = express();
-app.use(
-  cors({
-    //origin:
-    //"https://hospital-management-client-main-git-main-kreatboxs-projects.vercel.app/",
-    //optionsSuccessStatus: 200,
-    origin: "*", // يسمح لجميع النطاقات بالوصول (للاختبار فقط)
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
-  })
-);
-
 import { Toaster } from "react-hot-toast";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import {
