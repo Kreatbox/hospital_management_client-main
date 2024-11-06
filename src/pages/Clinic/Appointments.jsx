@@ -96,7 +96,7 @@ const Appointments = () => {
   const changeStatus = async (appointmentId) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/change-state`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/change-state`,
         { appointmentId, status: "Completed" },
         {
           headers: {
@@ -115,7 +115,7 @@ const Appointments = () => {
   const getTodayAppointments = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/get-today-appointments`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/get-today-appointments`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -147,11 +147,7 @@ const Appointments = () => {
             <span className="text-purple-600 mx-1">
               {moment().format("DD-MM-YYYY")}
             </span>
-            in{" "}
-            <span className="text-purple-600 mx-1">
-              {user.name}
-            </span>{" "}
-            :
+            in <span className="text-purple-600 mx-1">{user.name}</span> :
           </div>
         </div>
         {/* list of users in system */}

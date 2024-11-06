@@ -87,7 +87,7 @@ const Dashboard = () => {
   const deleteClinic = async (e, clinicId) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/delete-clinic`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/hospital/delete-clinic`,
         { clinicId },
         {
           headers: {
@@ -110,7 +110,7 @@ const Dashboard = () => {
   const getInfo = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/hospital/`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -127,7 +127,7 @@ const Dashboard = () => {
         toast.error(response.data.msg);
       }
     } catch (err) {
-      console.log(err)
+      console.log(err);
       toast.error(err.response.data.msg);
     }
   };

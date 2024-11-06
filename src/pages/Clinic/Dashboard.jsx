@@ -55,9 +55,7 @@ const Dashboard = () => {
       title: "Mobile",
       dataIndex: "mobile",
       render: (id, record) => {
-        return <span>
-          +{record.mobile}
-        </span>;
+        return <span>+{record.mobile}</span>;
       },
     },
     {
@@ -81,7 +79,7 @@ const Dashboard = () => {
   const deleteDoctor = async (doctorId) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/delete-doctor`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/delete-doctor`,
         { doctorId },
         {
           headers: {
@@ -104,7 +102,7 @@ const Dashboard = () => {
   const getInfo = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/`,
         {
           headers: {
             "Content-Type": "application/json",
@@ -120,7 +118,7 @@ const Dashboard = () => {
         toast.error(response.data.msg);
       }
     } catch (err) {
-        console.log(err)
+      console.log(err);
       if (err.response?.data.msg) {
         toast.error(err.response.data.msg + ",Please login ");
       }

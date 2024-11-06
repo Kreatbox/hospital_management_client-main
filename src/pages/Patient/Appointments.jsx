@@ -61,7 +61,7 @@ const Appointment = () => {
     if (!ok) return toast.error(error, { duration: 2000 });
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}patient/check-reservation`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/patient/check-reservation`,
         {
           clinicId: params.clinicId,
           time,
@@ -97,7 +97,7 @@ const Appointment = () => {
     if (!ok) return toast.error(error, { duration: 2000 });
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}patient/reservation`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/patient/reservation`,
         {
           clinicId: params.clinicId,
           time,
@@ -125,7 +125,7 @@ const Appointment = () => {
   const getInfo = async () => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/`,
         { clinicId: params.clinicId },
         {
           headers: {

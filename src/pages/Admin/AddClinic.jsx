@@ -119,7 +119,7 @@ const AddClinic = () => {
         }
       }
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/add-clinic`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/hospital/add-clinic`,
         formData,
         {
           headers: {

@@ -60,8 +60,8 @@ const PatientDaignosis = () => {
             <Modal
               open={open}
               onCancel={() => setOpen(false)}
-            //   onOk={() => setOpen(false)}
-            footer={null}
+              //   onOk={() => setOpen(false)}
+              footer={null}
             >
               <div className="flex flex-row gap-4">
                 <div className="flex w-[50%]">
@@ -86,7 +86,7 @@ const PatientDaignosis = () => {
   const getAllDiagnosis = async () => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}doctor/all-daignosis`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/doctor/all-daignosis`,
         {
           patientId,
           clinicId: user.clinic,

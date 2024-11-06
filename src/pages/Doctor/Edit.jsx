@@ -53,7 +53,7 @@ const Update = () => {
       }
       dispatch(showLoading());
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/add-doctor`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/add-doctor`,
         formData,
 
         {
@@ -67,7 +67,6 @@ const Update = () => {
         toast.success(response.data.msg, { duration: 2000 });
         navigate("/clinic/dashboard");
       } else {
-
         toast.error(response.data.error);
       }
     } catch (err) {

@@ -91,7 +91,7 @@ const UpdateInfo = () => {
       }
 
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/update-info`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/update-info`,
         formData,
         {
           headers: {

@@ -75,7 +75,7 @@ const AddDoctor = () => {
         }
       }
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}clinic/add-doctor`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/add-doctor`,
         formData,
         {
           headers: {
@@ -254,9 +254,12 @@ const AddDoctor = () => {
                 >
                   Create
                 </button>
-                <button className="w-[50%] p-2.5 mt-3 bg-gray-400 hover:bg-fuchsia-500  rounded-md text-black" onClick={()=>{
-                  navigate("/clinic/dashboard")}
-                }>
+                <button
+                  className="w-[50%] p-2.5 mt-3 bg-gray-400 hover:bg-fuchsia-500  rounded-md text-black"
+                  onClick={() => {
+                    navigate("/clinic/dashboard");
+                  }}
+                >
                   Cancel
                 </button>
               </div>

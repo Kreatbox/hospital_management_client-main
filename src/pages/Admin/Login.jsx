@@ -6,7 +6,7 @@ import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { setUser } from "../../redux/userSlice";
 import log from "../../assets/images/logo.png";
-import {Link} from "react-router-dom"
+import { Link } from "react-router-dom";
 
 const validateUserInfo = ({ email, password }) => {
   if (!email.trim()) return { ok: false, error: "Email is missing!" };
@@ -36,7 +36,7 @@ const Login = () => {
     if (!ok) return toast.error(error, { duration: 2000 });
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/login`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/hospital/login`,
         hospitalInfo
       );
       if (response.data.success) {
@@ -89,7 +89,10 @@ const Login = () => {
             <button className="w-full mt-5 py-2  bg-purple-200 shadow-lg shadow-purple-500/50 hover:shadow-purple-500/40 text-black  font-semibold rounded-lg">
               Login
             </button>
-            <Link to="/" className="w- py-2  text-black hover:text-blue-500 text-sm  font-semibold rounded-lg">
+            <Link
+              to="/"
+              className="w- py-2  text-black hover:text-blue-500 text-sm  font-semibold rounded-lg"
+            >
               &lt;--Home
             </Link>
           </form>

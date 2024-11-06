@@ -11,7 +11,7 @@ const AdminProtect = (props) => {
   const getAdmin = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/info`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/hospital/info`,
         {
           headers: {
             "Content-Type": "application/json",
