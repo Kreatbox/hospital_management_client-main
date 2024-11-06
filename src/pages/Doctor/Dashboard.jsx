@@ -164,7 +164,7 @@ const Dashboard = () => {
     if (!ok) return toast.error(error, { duration: 2000 });
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/doctor/make-daignosis`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/doctor/make-daignosis`,
         {
           clinicId: user.clinic._id,
           patientId,
@@ -191,7 +191,7 @@ const Dashboard = () => {
   const getTodayAppointments = async () => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/get-today-appointments`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/clinic/get-today-appointments`,
         { clinicId: user.clinic },
         {
           headers: {

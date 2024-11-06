@@ -87,7 +87,7 @@ const Dashboard = () => {
   const deleteClinic = async (e, clinicId) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/hospital/delete-clinic`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/hospital/delete-clinic`,
         { clinicId },
         {
           headers: {

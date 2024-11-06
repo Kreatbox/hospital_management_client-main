@@ -79,7 +79,7 @@ const Dashboard = () => {
   const deleteDoctor = async (doctorId) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/delete-doctor`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/clinic/delete-doctor`,
         { doctorId },
         {
           headers: {
@@ -102,7 +102,7 @@ const Dashboard = () => {
   const getInfo = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/clinic/`,
         {
           headers: {
             "Content-Type": "application/json",

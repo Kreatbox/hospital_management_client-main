@@ -86,7 +86,7 @@ const PatientDaignosis = () => {
   const getAllDiagnosis = async () => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/doctor/all-daignosis`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/doctor/all-daignosis`,
         {
           patientId,
           clinicId: user.clinic,

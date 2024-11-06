@@ -47,7 +47,7 @@ const Register = () => {
 
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/patient/register`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/patient/register`,
         patientInfo
       );
       if (response.data.success) {

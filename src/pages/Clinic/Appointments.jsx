@@ -96,7 +96,7 @@ const Appointments = () => {
   const changeStatus = async (appointmentId) => {
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/change-state`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/clinic/change-state`,
         { appointmentId, status: "Completed" },
         {
           headers: {
@@ -115,7 +115,7 @@ const Appointments = () => {
   const getTodayAppointments = async () => {
     try {
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/clinic/get-today-appointments`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/clinic/get-today-appointments`,
         {
           headers: {
             "Content-Type": "application/json",

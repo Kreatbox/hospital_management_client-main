@@ -35,7 +35,7 @@ const Login = () => {
     if (!ok) return toast.error(error, { duration: 2000 });
     try {
       const response = await axios.post(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/doctor/login`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}api/doctor/login`,
         doctorInfo
       );
       if (response.data.success) {
