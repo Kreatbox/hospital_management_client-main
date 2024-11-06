@@ -14,7 +14,7 @@ const Footer = () => {
       if (token) headers.Authorization = `Bearer ${token}`;
 
       const response = await axios.get(
-        `${process.env.REACT_APP_LOCAL_SERVER_HOST}/api/hospital/`,
+        `${process.env.REACT_APP_LOCAL_SERVER_HOST}hospital/`,
         { headers }
       );
 
